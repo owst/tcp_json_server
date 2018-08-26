@@ -7,7 +7,7 @@ non-blocking IO in Ruby.
 
 To use, compile and run the server in one terminal with:
 ```
-gcc -Wall server.c -o server && ./server
+clang -Wall server.c -o server && ./server
 ```
 and in another terminal run the client with:
 ```
@@ -40,4 +40,18 @@ Socket with source port 59397 EOF!
 {"iteration":1,"client":"127.0.0.1:59399"}
 {"iteration":2,"client":"127.0.0.1:59399"}
 Socket with source port 59399 EOF!
+```
+
+Tested on MacOS 10.13.4, with Ruby:
+```
+> ruby --version
+ruby 2.4.4p296 (2018-03-28 revision 63013) [x86_64-darwin14]
+```
+and clang:
+```
+> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.2)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
 ```
